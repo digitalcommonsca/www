@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blog
+description: Writing from the Canadian Digital Commons Institute on open systems, knowledge infrastructure, standards, research, and stewardship.
+permalink: /blog/
+body_class: blog-page
+---
+<section class="blog-hero">
+  <p class="page-kicker">Institute writing</p>
+  <h1>Notes on the digital commons.</h1>
+  <p>Research, working ideas, project updates, and essays on the systems that support shared digital life.</p>
+</section>
+
+<section class="blog-index">
+  {% for post in site.posts %}
+    <article class="blog-entry">
+      <div class="blog-entry-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+        <span>{{ post.category | default: 'Institute note' }}</span>
+      </div>
+      <div>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 220 }}</p>
+      </div>
+      <a class="entry-arrow" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">↗</a>
+    </article>
+  {% endfor %}
+</section>

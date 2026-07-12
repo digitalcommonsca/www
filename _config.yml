@@ -1,0 +1,44 @@
+title: Canadian Digital Commons Institute
+short_title: CDCI
+description: >-
+  The Canadian Digital Commons Institute is a public-interest initiative advancing open standards,
+  research, software, education, datasets, and digital infrastructure.
+url: "https://digitalcommons.institute"
+baseurl: ""
+lang: en-CA
+timezone: America/Toronto
+
+permalink: /:title/
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+
+collections:
+  projects:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Canadian Digital Commons Institute

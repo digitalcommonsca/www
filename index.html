@@ -1,0 +1,89 @@
+---
+layout: default
+title: Canadian Digital Commons Institute
+description: Open systems, shared knowledge, and durable digital infrastructure for Canada.
+body_class: home-page
+---
+<section class="hero" id="top">
+  <div class="hero-kicker">Public-interest digital infrastructure</div>
+  <div class="hero-title-wrap">
+    <h1>
+      <span>Canadian</span>
+      <span>Digital Commons</span>
+      <span>Institute</span>
+    </h1>
+  </div>
+  <div class="hero-bottom">
+    <p class="hero-statement">Open systems, shared knowledge, and durable digital infrastructure for Canada.</p>
+    <div class="hero-index" aria-label="Institute focus areas">
+      <span>Standards</span><span>Research</span><span>Software</span><span>Knowledge</span><span>Stewardship</span>
+    </div>
+  </div>
+</section>
+
+<section class="intro-strip" id="about">
+  <div class="strip-label">01 / About</div>
+  <div class="strip-copy">
+    <p>The Canadian Digital Commons Institute is a long-term public-interest initiative focused on the infrastructure, standards, knowledge systems, and stewardship practices that support a healthy digital commons.</p>
+    <p>It is being developed as an independent home for practical work that can be used, studied, maintained, and extended by others.</p>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="manifesto-line"><span class="manifesto-number">A</span><p>Build foundations that remain useful beyond a single platform.</p></div>
+  <div class="manifesto-line"><span class="manifesto-number">B</span><p>Make knowledge easier to access, verify, reuse, and preserve.</p></div>
+  <div class="manifesto-line"><span class="manifesto-number">C</span><p>Treat governance and maintenance as part of the infrastructure.</p></div>
+</section>
+
+<section class="fields" id="fields">
+  <div class="section-cap"><span>02</span><h2>Fields of work</h2></div>
+  <div class="field-grid">
+    <article class="field field-dark"><span class="field-code">F.01</span><h3>Open standards</h3><p>Specifications, schemas, protocols, and implementation guidance.</p></article>
+    <article class="field field-light"><span class="field-code">F.02</span><h3>Digital infrastructure</h3><p>Open systems and reusable foundations designed for public value.</p></article>
+    <article class="field field-accent"><span class="field-code">F.03</span><h3>Research</h3><p>Technical studies, policy work, benchmarks, and open methods.</p></article>
+    <article class="field field-light"><span class="field-code">F.04</span><h3>Knowledge systems</h3><p>Documentation, metadata, learning resources, and public datasets.</p></article>
+    <article class="field field-dark"><span class="field-code">F.05</span><h3>Provenance and trust</h3><p>Tools for traceability, evidence chains, integrity, and accountability.</p></article>
+    <article class="field field-outline"><span class="field-code">F.06</span><h3>Stewardship</h3><p>Governance, preservation, maintenance, and long-term continuity.</p></article>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="section-cap section-cap-light"><span>03</span><h2>Emerging portfolio</h2></div>
+  <div class="portfolio-list">
+    <article><span class="project-no">001</span><div><h3>OSSI</h3><p>Open specifications and implementation guidance.</p></div><span class="project-type">Standards</span></article>
+    <article><span class="project-no">002</span><div><h3>ProvenanceDB</h3><p>Provenance, metadata, trust, and machine-readable evidence.</p></div><span class="project-type">Infrastructure</span></article>
+    <article><span class="project-no">003</span><div><h3>Canada AI</h3><p>Canadian AI ecosystem mapping, resources, and research.</p></div><span class="project-type">Knowledge</span></article>
+    <article><span class="project-no">004</span><div><h3>Code the North</h3><p>Open civic technology and public-interest digital tools.</p></div><span class="project-type">Civic tech</span></article>
+    <article><span class="project-no">005</span><div><h3>Awesome Learn</h3><p>Structured and openly accessible learning collections.</p></div><span class="project-type">Education</span></article>
+  </div>
+</section>
+
+<section class="principles" id="principles">
+  <div class="principles-head"><span>04</span><h2>What the Institute is being built to protect</h2></div>
+  <div class="principle-sequence">
+    <article><span>01</span><h3>Public benefit</h3><p>Work should create value beyond a single organization or platform.</p></article>
+    <article><span>02</span><h3>Openness</h3><p>Methods, knowledge, and infrastructure should be open whenever practical.</p></article>
+    <article><span>03</span><h3>Interoperability</h3><p>Systems should work across tools, institutions, formats, and communities.</p></article>
+    <article><span>04</span><h3>Durability</h3><p>Foundations should outlast short technology cycles and individual maintainers.</p></article>
+  </div>
+</section>
+
+<section class="home-blog" id="writing">
+  <div class="section-cap"><span>05</span><h2>Latest writing</h2></div>
+  <div class="home-posts">
+    {% for post in site.posts limit: 3 %}
+      <article>
+        <p class="home-post-meta">{{ post.date | date: '%Y.%m.%d' }} / {{ post.category | default: 'Institute note' }}</p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 170 }}</p>
+      </article>
+    {% endfor %}
+  </div>
+  <a class="text-link" href="{{ '/blog/' | relative_url }}">View all writing →</a>
+</section>
+
+<section class="status" id="status">
+  <div class="status-label">06 / Current status</div>
+  <div class="status-main"><h2>Foundational development</h2><p>The Institute is currently defining its mission, governance model, research agenda, project portfolio, and public identity.</p></div>
+  <div class="status-note"><span>Next</span><p>Governance, project criteria, publications, and participation pathways.</p></div>
+</section>
